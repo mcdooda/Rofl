@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rofl", "Rofl\Rofl\Rofl.csproj", "{C2AE8227-A017-485D-AD13-3FC5E2838E8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoflContent", "Rofl\RoflContent\RoflContent.contentproj", "{37DFBAB2-C014-4375-B326-78E25B8EACAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoflLib", "RoflLib\RoflLib.csproj", "{F1463718-6DBC-4D21-8FC2-66A6A10E0052}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiseEditor", "RiseEditor\RiseEditor\RiseEditor.csproj", "{A733BA46-0727-4228-BEC7-000E9E9CC573}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FFDF3D34-DAE0-483B-8B03-4DD34B88A96F} = {FFDF3D34-DAE0-483B-8B03-4DD34B88A96F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiseEditorContent", "RiseEditor\RiseEditorContent\RiseEditorContent.contentproj", "{5443EA9B-C310-497F-BBB6-06CD700F0D6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelContentPipelineExtension", "LevelContentPipelineExtension\LevelContentPipelineExtension.csproj", "{EB2940CA-B5C3-4ADA-ACD9-5B9D0C8369CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoflCodeContent", "RoflCodeContent\RoflCodeContent.csproj", "{FFDF3D34-DAE0-483B-8B03-4DD34B88A96F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F1463718-6DBC-4D21-8FC2-66A6A10E0052} = {F1463718-6DBC-4D21-8FC2-66A6A10E0052}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RumbleEditor", "RumbleEditor\RumbleEditor\RumbleEditor.csproj", "{49044CDB-ECFA-421B-BF6C-D58E683C30E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RumbleEditorContent", "RumbleEditor\RumbleEditorContent\RumbleEditorContent.contentproj", "{733C2C70-2B48-4386-A085-C96C05B1AD50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterContentPipelineExtension", "CharacterContentPipelineExtension\CharacterContentPipelineExtension.csproj", "{0B3D2A8A-55BF-4672-A845-6F2EAFF33DA5}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2AE8227-A017-485D-AD13-3FC5E2838E8E}.Debug|x86.ActiveCfg = Debug|x86
+		{C2AE8227-A017-485D-AD13-3FC5E2838E8E}.Debug|x86.Build.0 = Debug|x86
+		{C2AE8227-A017-485D-AD13-3FC5E2838E8E}.Release|x86.ActiveCfg = Release|x86
+		{C2AE8227-A017-485D-AD13-3FC5E2838E8E}.Release|x86.Build.0 = Release|x86
+		{37DFBAB2-C014-4375-B326-78E25B8EACAC}.Debug|x86.ActiveCfg = Debug|x86
+		{37DFBAB2-C014-4375-B326-78E25B8EACAC}.Release|x86.ActiveCfg = Release|x86
+		{F1463718-6DBC-4D21-8FC2-66A6A10E0052}.Debug|x86.ActiveCfg = Debug|x86
+		{F1463718-6DBC-4D21-8FC2-66A6A10E0052}.Debug|x86.Build.0 = Debug|x86
+		{F1463718-6DBC-4D21-8FC2-66A6A10E0052}.Release|x86.ActiveCfg = Release|x86
+		{F1463718-6DBC-4D21-8FC2-66A6A10E0052}.Release|x86.Build.0 = Release|x86
+		{A733BA46-0727-4228-BEC7-000E9E9CC573}.Debug|x86.ActiveCfg = Debug|x86
+		{A733BA46-0727-4228-BEC7-000E9E9CC573}.Debug|x86.Build.0 = Debug|x86
+		{A733BA46-0727-4228-BEC7-000E9E9CC573}.Release|x86.ActiveCfg = Release|x86
+		{A733BA46-0727-4228-BEC7-000E9E9CC573}.Release|x86.Build.0 = Release|x86
+		{5443EA9B-C310-497F-BBB6-06CD700F0D6D}.Debug|x86.ActiveCfg = Debug|x86
+		{5443EA9B-C310-497F-BBB6-06CD700F0D6D}.Release|x86.ActiveCfg = Release|x86
+		{EB2940CA-B5C3-4ADA-ACD9-5B9D0C8369CA}.Debug|x86.ActiveCfg = Debug|x86
+		{EB2940CA-B5C3-4ADA-ACD9-5B9D0C8369CA}.Debug|x86.Build.0 = Debug|x86
+		{EB2940CA-B5C3-4ADA-ACD9-5B9D0C8369CA}.Release|x86.ActiveCfg = Debug|x86
+		{EB2940CA-B5C3-4ADA-ACD9-5B9D0C8369CA}.Release|x86.Build.0 = Debug|x86
+		{FFDF3D34-DAE0-483B-8B03-4DD34B88A96F}.Debug|x86.ActiveCfg = Debug|x86
+		{FFDF3D34-DAE0-483B-8B03-4DD34B88A96F}.Debug|x86.Build.0 = Debug|x86
+		{FFDF3D34-DAE0-483B-8B03-4DD34B88A96F}.Release|x86.ActiveCfg = Release|x86
+		{FFDF3D34-DAE0-483B-8B03-4DD34B88A96F}.Release|x86.Build.0 = Release|x86
+		{49044CDB-ECFA-421B-BF6C-D58E683C30E3}.Debug|x86.ActiveCfg = Debug|x86
+		{49044CDB-ECFA-421B-BF6C-D58E683C30E3}.Debug|x86.Build.0 = Debug|x86
+		{49044CDB-ECFA-421B-BF6C-D58E683C30E3}.Release|x86.ActiveCfg = Release|x86
+		{49044CDB-ECFA-421B-BF6C-D58E683C30E3}.Release|x86.Build.0 = Release|x86
+		{733C2C70-2B48-4386-A085-C96C05B1AD50}.Debug|x86.ActiveCfg = Debug|x86
+		{733C2C70-2B48-4386-A085-C96C05B1AD50}.Release|x86.ActiveCfg = Release|x86
+		{0B3D2A8A-55BF-4672-A845-6F2EAFF33DA5}.Debug|x86.ActiveCfg = Debug|x86
+		{0B3D2A8A-55BF-4672-A845-6F2EAFF33DA5}.Debug|x86.Build.0 = Debug|x86
+		{0B3D2A8A-55BF-4672-A845-6F2EAFF33DA5}.Release|x86.ActiveCfg = Debug|x86
+		{0B3D2A8A-55BF-4672-A845-6F2EAFF33DA5}.Release|x86.Build.0 = Debug|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
