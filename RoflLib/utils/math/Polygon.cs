@@ -91,7 +91,7 @@ namespace RoflLib.utils.math
             lineListIndices = new short[vertices.Count * 2];
 
             Vector2 rendererCenter = renderer.Center;
-            float f = 1 - (float)Math.Pow(2, depth);
+            float f = renderer.GetPerspective(depth);
 
             Vector3 vertexPosition = new Vector3(0, 0, -100);
             for (int i = 0; i < vertices.Count; i++)

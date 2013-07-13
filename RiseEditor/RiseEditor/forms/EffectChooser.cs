@@ -55,6 +55,7 @@ namespace RiseEditor.forms
             }
             catch (DirectoryNotFoundException ex)
             {
+                Console.WriteLine(ex);
             }
         }
 

@@ -186,7 +186,7 @@ namespace RoflLib
         {
             spriteBatch.Draw(
                 texture,
-                (-topLeft + textureCenter + center * (1 - (float)Math.Pow(2, depth))) * zoom - new Vector2(texture.Width, texture.Height) / 2,
+                (-topLeft + textureCenter + center * GetPerspective(depth)) * zoom - new Vector2(texture.Width, texture.Height) / 2,
                 Color.White
             );
         }
@@ -216,15 +216,16 @@ namespace RoflLib
 
         public void DrawAnimation(Animation animation)
         {
-            Vector2 position = (-topLeft + animation.Position + center * (1 - (float)Math.Pow(2, animation.Depth))) * zoom;
+            Vector2 position = (-topLeft + animation.Position + center * GetPerspective(animation.Depth)) * zoom;
             spriteBatch.Draw(animation.Texture, position, animation.SourceRectangle, animation.Color, animation.Rotation, animation.Center, animation.Scale * zoom, animation.SpriteEffects, 0);
         }
 
         public void DrawElement(LevelElement element)
         {
+            float perspective = GetPerspective(element.Layer.Depth);
             Vector2 position = new Vector2(
-                (-topLeft.X + element.Center.X + center.X * (1 - (float)Math.Pow(2, element.Layer.Depth))),
-                (-topLeft.Y + element.Center.Y + center.Y * (1 - (float)Math.Pow(2, element.Layer.Depth)))
+                (-topLeft.X + element.Center.X + center.X * perspective),
+                (-topLeft.Y + element.Center.Y + center.Y * perspective)
                 //(-topLeft.Y + element.Center.Y)
             ) * zoom;
             spriteBatch.Draw(
@@ -242,10 +243,10 @@ namespace RoflLib
 
         public void DrawParticle(Particle particle)
         {
-            float depth = particle.Effect.Layer.Depth;
+            float perspective = GetPerspective(particle.Effect.Layer.Depth);
             Vector2 position = new Vector2(
-                (-topLeft.X + particle.Position.X + center.X * (1 - (float)Math.Pow(2, depth))),
-                (-topLeft.Y + particle.Position.Y + center.Y * (1 - (float)Math.Pow(2, depth)))
+                (-topLeft.X + particle.Position.X + center.X * perspective),
+                (-topLeft.Y + particle.Position.Y + center.Y * perspective)
                 //(-topLeft.Y + element.Center.Y)
             ) * zoom;
             spriteBatch.Draw(
@@ -282,7 +283,15 @@ namespace RoflLib
 
         public Vector2 GetCameraRelative(Vector2 position, float depth)
         {
-            return position / zoom + topLeft - center * (1 - (float)Math.Pow(2, depth));
+            return position / zoom + topLeft - center * GetPerspective(depth);
+        }
+
+        public float GetPerspective(float depth)
+        {
+            if (depth > 0)
+                return 1 - (float)Math.Pow(2, depth);
+            else
+                return -1 + (float)Math.Pow(2, -depth);
         }
 
         public void Clear(Color color)
